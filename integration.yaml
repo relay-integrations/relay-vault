@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Integration
-name: template
+name: vault
 channel: stable
 version: v20200514
 summary: Integration template
@@ -9,7 +9,7 @@ homepage: https://github.com/relay-integrations/template
 source: https://github.com/relay-integrations/template
 
 description: |
-  This is a template for creating a Relay Integration repository.
+  Relay Integration with Hashicorp Vault
 
 owner:
   name: Puppet, Inc.
