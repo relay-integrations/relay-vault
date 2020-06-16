@@ -5,8 +5,8 @@ channel: stable
 version: v20200514
 summary: Integration template
 license: Apache-2.0
-homepage: https://github.com/relay-integrations/template
-source: https://github.com/relay-integrations/template
+homepage: https://github.com/relay-integrations/relay-vault
+source: https://github.com/relay-integrations/relay-vault
 
 description: |
   Relay Integration with Hashicorp Vault
