@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "vault": {
+      "type": "object",
+      "description": "A map of the address and token for accessing a Vault server.",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Vault server address"
+        },
+        "token": {
+          "type": "string",
+          "description": "Vault login token"
+        }
+      },
+      "required": [
+        "url",
+        "token"
+      ]
+    },
+    "command": {
+      "type": "string",
+      "description": "The command to pass to vault. For example, `write`."
+    },
+    "args": {
+      "type": "string",
+      "description": "A string of arguments for commands other than `write`."
+    },
+    "git": {
+      "type": "object",
+      "description": "A map of git configuration. If you're using HTTPS, only name and repository are required.",
+      "properties": {
+        "ssh_key": {
+          "type": "string",
+          "description": "The SSH key to use when cloning the git repository. You can pass the key to Relay as a secret."
+        },
+        "known_hosts": {
+          "type": "string",
+          "description": "SSH known hosts file. Use a Relay secret to pass the contents of the file into the workflow as a base64-encoded string."
+        },
+        "name": {
+          "type": "string",
+          "description": "A directory name for the git clone."
+        },
+        "branch": {
+          "type": "string",
+          "description": "The Git branch to clone.",
+          "default": "master"
+        },
+        "repository": {
+          "type": "string",
+          "description": "The git repository URL."
+        }
+      },
+      "required": [
+        "ssh_key",
+        "name",
+        "repository"
+      ]
+    }
+  },
+  "required": [
+    "vault",
+    "command"
+  ],
+  "additionalProperties": false
+}
