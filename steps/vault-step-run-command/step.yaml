@@ -15,3 +15,22 @@ schemas:
   spec:
     source: file
     file: spec.schema.json
+examples: 
+- summary: Run Vault command
+  content:
+    apiVersion: v1 
+    kind: Step
+    name: run-vault-command
+    image: relaysh/vault-step-run-command
+    spec:
+      vault:
+        url: !Secret vault_url 
+        token: !Secret vault_token 
+      command: !Parameter command 
+      args: !Parameter args
+      git: 
+        ssh_key: !Secret ssh_key
+        known_hosts: !Secret known_hosts
+        name: !Parameter my-repo
+        branch: !Parameter branch 
+        repository: !Parameter repo-path
