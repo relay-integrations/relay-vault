@@ -2,7 +2,7 @@ apiVersion: integration/v1
 kind: Step
 name: vault-step-run-command
 version: 3
-summary: Run command
+summary: Run Vault command
 description: |
   This step runs Vault CLI commands against a vault server.
 icon:
