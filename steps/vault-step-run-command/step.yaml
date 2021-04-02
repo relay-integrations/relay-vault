@@ -4,7 +4,7 @@ name: vault-step-run-command
 version: 3
 summary: Run Vault command
 description: |
-  This step runs Vault CLI commands against a vault server.
+  Runs Vault CLI commands against a vault server.
 icon:
 build:
   apiVersion: build/v1
